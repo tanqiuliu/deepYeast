@@ -130,7 +130,7 @@ def get_polygon_list(image, center_list):
     (slopes, gradx, grady, slopes2, grad2x, grad2y, gradxy) = findslopes(image)
     polygon_list = list()
     for i in range(len(center_list)):
-        print("processing %s" %i)
+        print("processing cell %s" %i)
         polygon = get_polygon(image, gradx, grady, center_list[i])
         polygon_list.append(polygon)
     return polygon_list
