@@ -4,7 +4,7 @@ from scipy.signal import savgol_filter
 from scipy.spatial import ConvexHull
 """
 This file contains functions used to segment the contour of single cell with a seed point.
-The principal algorithm is :
+The principal algorithm is dynamic programming:
 1. generate a series of rays of different direnctions from the seed of the cell detected,
 2. compute several images which include pix_image, gradx, grady, grad_from_center...
 3. get the values of each image on all points on the rays, which is named tab, pixtab, gxtab, gytab...
