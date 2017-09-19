@@ -23,7 +23,9 @@ The convolutional neural network consists of three convolutional layers and two 
 
 <img src="./markdown/WX20170918-205912@2x.png" alt="CNN structure" align=center>
 
-For each image, the sliding window method predicts a set of points which are candidates of cell centers. Following postprocessing of these candidates includes discard points outside the cells and merge points in the cells. Finally we get precise and robust predictions of cell centers.
+For each image, the sliding window method predicts a set of points which are candidates of centers of cells. Following postprocessing of these candidates includes discard points outside the cells and merge points in the cells. Finally we get precise and robust predictions of centers of cells.
 
 <img src="./markdown/Picture3.png" width = "160" height = "300">    <img src="./markdown/Picture4.png" width = "160" height = "300">    <img src="./markdown/Picture5.png" width = "160" height = "300">
 
+
+###1.Detecting cell contour
