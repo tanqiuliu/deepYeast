@@ -7,7 +7,8 @@ In biological research, even though the experiment is applied to a number of cel
 
 A sample image：
 
-![](./markdown/example1.tif)
+<img src="./markdown/example1.tif" width = "256" height = "56" alt="sample image" align=center />
+
 
 ## Methods
 The detection process consists of 4 steps: 1) Preprocessing of images, 2) locating cell centers with a convolutional neural network(CNN), 3) detecting cell contour.
