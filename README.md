@@ -7,7 +7,7 @@ In biological research, even though the experiment is applied to a number of cel
 
 A sample image：
 
-<img src="./markdown/example1.tif" width = "256" height = "56" alt="sample image" align=center />
+<img src="./markdown/example1.tif" width = "256" height = "256" alt="sample image" align=center />
 
 
 ## Methods
