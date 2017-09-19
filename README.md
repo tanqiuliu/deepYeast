@@ -13,7 +13,7 @@ A sample image：
 ## Methods
 The detection process consists of 2 steps: 1) locating cell centers with a convolutional neural network(CNN), 2) detecting cell contour.
 
-###1. Locating cell centers with a convolutional neural network(CNN)
+1. Locating cell centers with a convolutional neural network(CNN)
 A convolutional neural network model was developed to automatically identify the location of the cell centers. The pipeline employed a sliding window approach for detection. That is , a small window slides across the entire image and for position output whether the position is the center of a cell or not. 
 The training data was extracted and transformed from raw .csg files which are manually labeled by former researchers. Positive examples are obtained by generating a window centered on the center of the cell. Negative examples are obtained by random sampling outside the cells.
 
@@ -28,4 +28,16 @@ For each image, the sliding window method predicts a set of points which are can
 <img src="./markdown/Picture3.png" width = "160" height = "300">    <img src="./markdown/Picture4.png" width = "160" height = "300">    <img src="./markdown/Picture5.png" width = "160" height = "300">
 
 
-###1.Detecting cell contour
+1.Detecting cell contour
+A dynamic programming algorithm was developed to detect the contour of single cell given a seed point at the center of the cell. 
+The principal algorithm is :
+1) generate a series of rays of different direnctions from the seed of the cell detected,
+2) compute several images which include pix_image, gradx, grady, grad_from_center...
+3) get the values of each image on all points on the rays, which is named tab, pixtab, gxtab, gytab...
+4) find out the optimal pathway(dynamic programming) through all of the rays which best represents the cell contour (manually defined scoring function)
+5) filter the optimal pathway and get the polygon/mask of the cell
+
+Sample results:
+
+
+<img src="./markdown/figure_1.png" width = "256" height = "256">      <img src="./markdown/figure_0.png" width = "256" height = "256">
